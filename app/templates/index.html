@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>文件传输</title>
+</head>
+<body>
+<div class="text clearfix" style="text-align:right">
+	{%if loged_in%}
+		欢迎您,{{user}}. <a href="/logout">退出登录</a>
+	{%else%}
+		匿名用户, <a href="/login">请登录</a>
+	{%endif%}
+</div>
+<center>
+	<h1>文件传输系统</h1>
+    <p><a href="upload/">上传文件</a></p>
+    <p><a href="download/">下载文件</a></p>
+</center>
+</body>
+</html>

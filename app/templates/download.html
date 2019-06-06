@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>文件传输</title>
+</head>
+<body bgcolor="white">
+<div class="text clearfix" style="text-align:right">
+	{%if loged_in%}
+		欢迎您,{{user}}. <a href="/logout">退出登录</a>
+	{%else%}
+		匿名用户, <a href="/login">请登录</a>
+	{%endif%}
+</div>
+<h1>Index of {{path}}</h1>
+<hr>
+<pre>
+<a href="{{path_prev}}">..</a>
+{%for a in dirs%}
+<a href="{{org_path}}/{{a.0}}">{{a.0}}</a>{{a.1}}
+{%endfor%}
+
+{%for b in files%}
+<a href="{{org_path}}/{{b.0}}">{{b.0}}</a>{{b.1}}
+{%endfor%}
+
+</pre>
+<hr>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>上传文件</title>
+</head>
+<body>
+<div class="text clearfix" style="text-align:right">
+    欢迎您,{{user}}. <a href="/logout">退出登录</a>
+</div>
+<h1>上传文件</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+    	{% csrf_token %}
+    	<p>
+    		<label for="id_file">文件:</label>
+    		<input type="file" name="file" id="id_file" required="">
+    	</p>
+    	<p>
+    		<label for="id_passwd">密码:</label>
+    		<input type="password" name="passwd" id="id_passwd" maxlength="20" placeholder="请输入密码">
+    	</p>
+    	<input type="submit" value="提交" >
+    </form>
+<br>
+<br>
+<a href="../">返回</a>
+</body>
+</html>

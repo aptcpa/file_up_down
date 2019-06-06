@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录</title>
+</head>
+<body>
+<center><h1>登录账号</h1>
+	<form action="" method="post" enctype="multipart/form-data">
+    	{% csrf_token %}
+    	<p>
+    		<label for="id_user">账号:</label>
+    		<input type="text" name="user" id="id_user" required="">
+    	</p>
+    	<p>
+    		<label for="id_passwd">密码:</label>
+    		<input type="password" name="password" id="id_passwd" maxlength="20" placeholder="请输入密码" required="">
+    	</p>
+    	<input type="submit" value="提交" >
+    </form>
+</center>
+</body>
+</html>
